@@ -111,3 +111,7 @@ code {
   border-radius: 0.2rem;
   background: #e5e9f0;
 }
+img{
+  width: 50%;
+  margin: auto;
+}
