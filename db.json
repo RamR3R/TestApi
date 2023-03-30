@@ -1802,6 +1802,17 @@
   ],
   "users": [
     {
+        "id":1,
+        "username": "fabrica",
+          "firstname": "D",
+          "lastname": "Fabrica",
+          "email": "d@fabrica.com",
+          "password": "user",
+          "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/355.jpg",
+          "userLevel":4,
+          "createdAt": 1670165980693  
+    },
+    {
       "id": 2,
       "username": "Hal_Kihn71",
       "firstname": "Jessie",
