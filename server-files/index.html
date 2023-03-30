@@ -46,16 +46,14 @@
 
         <hr />
         <p>
-          To access and modify `DFabrica`, you can use any HTTP method: <code>GET</code>,  <code>POST</code>,
-          <code>PUT</code>,  <code>PATCH</code> , <code>DELETE</code> OPTIONS
-        </p>
+          To access `DFabrica`, by using the HTTP method: <code>GET</code>        </p>
         
         <p>
-          For all other routes <code>GET</code> is open but all other HTTP methods requires
+          For all routes <code>GET</code> is open but all other HTTP methods requires
           Authentication.
         </p>
 
-        <p>For the <code>/users</code> route, all methods are protected.</p>
+        <p>For the <code>/users</code> route, <code>GET</code> is open and other all methods are protected.</p>
 
         <p>
           Register a user: <code>/register</code>
@@ -64,8 +62,17 @@
         <p>
           Login an existing user: <code>/login</code>
         </p>
+        <p>For the <code>/admin</code> route, all methods are protected.</p>
 
-        <hr />
+        <p>
+          For admin Login : <code>/admin/login</code>
+        </p>
+
+        <p>
+          Only admin can access all the HTTP method: <code>GET</code>,<code>POST</code>,<code>PATCH</code>,<code>DELETE</code>,<code>PUT</code> with the <code>Authentication TOKEN</code> provided.
+        </p>
+
+        <hr/>
 
         <h1>Documentation</h1>
         <p>

@@ -1,6 +1,7 @@
 export default {
   protectedRoutes: [
-    { route: "/users", methods: ["POST", "PUT", "DELETE", "PATCH"] },
+    { route: "/users", methods: ["GET","POST", "PUT", "DELETE", "PATCH"] },
+    { route: "/Dfabrica ", methods: ["POST", "PUT", "DELETE", "PATCH"] }
   ]
 }
 
