@@ -107,9 +107,9 @@ server.use((req, res, next) => {
 server.post("/register", (req, res) => {
   if (
     !req.body ||
-     !req.body.username 
-    //|| !req.body.password ||
-    // !req.body.email
+    !req.body.username ||
+    !req.body.password ||
+    !req.body.email
   ) {
     return res
       .status(400)
@@ -127,9 +127,13 @@ server.post("/register", (req, res) => {
   const newId = largestId + 1;
   const newUserData = {
     username: req.body.username,
-    
+    password: hashedPassword,
+    email: req.body.email,
+    firstname: req.body.firstname || "",
+    lastname: req.body.lastname || "",
+    avatar: req.body.avatar || "",
     createdAt: Date.now(),
-    id: newId
+    id: newId,
   };
 
   db.data.users.push(newUserData);
@@ -141,7 +145,7 @@ server.post("/register", (req, res) => {
 
 // login/sign in logic
 server.post("/login", (req, res) => {
-  if (!req.body || !req.body.username) {
+  if (!req.body || !req.body.username || !req.body.password) {
     return res
       .status(400)
       .send("Bad request, requires username & password both.");
