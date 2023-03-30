@@ -1802,17 +1802,6 @@
   ],
   "users": [
     {
-      "id": 1,
-      "username": "admin",
-      "firstname": "Admin",
-      "lastname": "DFabrica",
-      "email": "admin@DFabrica.com",
-      "password": "$2b$10$lLm5Lp40uBR9CUrZn58CdOl8yu5Gp2umAO.6ly.vWcZ0a0vUKsHiC",
-      "avatar": "/images/avatar/avatar1.jpeg",
-      "userLevel": 4,
-      "createdAt": 1670165980638
-    },
-    {
       "id": 2,
       "username": "Hal_Kihn71",
       "firstname": "Jessie",
@@ -2400,6 +2389,19 @@
       "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/304.jpg",
       "createdAt": 1671349472625,
       "id": 55
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "username": "admin",
+      "firstname": "Admin",
+      "lastname": "DFabrica",
+      "email": "admin@DFabrica.com",
+      "password": "$2b$10$lLm5Lp40uBR9CUrZn58CdOl8yu5Gp2umAO.6ly.vWcZ0a0vUKsHiC",
+      "avatar": "/images/avatar/avatar1.jpeg",
+      "userLevel": 4,
+      "createdAt": 1670165980638
     }
   ]
 }
