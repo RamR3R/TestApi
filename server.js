@@ -152,7 +152,7 @@ server.post("/login", (req, res) => {
   }
 
   db.read();
-  const users = db.data.users;
+  const users = db.data.admin;
   const user = users.find((u) => u.username === req.body.username);
   if (user == null) {
     return res.status(400).send(`Cannot find user: ${req.body.username}`);
