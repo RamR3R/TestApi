@@ -144,7 +144,7 @@ server.post("/register", (req, res) => {
 });
 
 // login/sign in logic
-server.post("/login", (req, res) => {
+server.post("/admin/login", (req, res) => {
   if (!req.body || !req.body.username || !req.body.password) {
     return res
       .status(400)
