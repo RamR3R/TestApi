@@ -129,7 +129,7 @@ server.post("/register", (req, res) => {
     username: req.body.username,
     
     createdAt: Date.now(),
-    id: newId,
+    id: newId
   };
 
   db.data.users.push(newUserData);
