@@ -143,6 +143,7 @@ server.post("/register", (req, res) => {
   res.status(201).send(newUserData);
 });
 
+// login/sign in logic
 server.post("/login", (req, res) => {
   if (!req.body || !req.body.username || !req.body.password) {
     return res
@@ -152,33 +153,6 @@ server.post("/login", (req, res) => {
 
   db.read();
   const users = db.data.users;
-  const user = users.find((u) => u.username === req.body.username);
-  if (user == null) {
-    return res.status(400).send(`Cannot find user: ${req.body.username}`);
-  }
-
-  if (bcrypt.compareSync(req.body.password, user.password)) {
-    // creating JWT token
-    //const accessToken = generateAccessToken(user);
-    return res.send({
-     // accessToken: accessToken,
-      user: user
-    });
-  } else {
-    res.send("Not allowed, name/password mismatch.");
-  }
-});
-
-// admin login in logic
-server.post("/admin/login", (req, res) => {
-  if (!req.body || !req.body.username || !req.body.password) {
-    return res
-      .status(400)
-      .send("Bad request, requires username & password both.");
-  }
-
-  db.read();
-  const users = db.data.admin;
   const user = users.find((u) => u.username === req.body.username);
   if (user == null) {
     return res.status(400).send(`Cannot find user: ${req.body.username}`);
