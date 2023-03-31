@@ -152,10 +152,10 @@ server.post("/admin/login", (req, res) => {
   }
 
   db.read();
-  const users = db.data.users;
-  const user = users.find((u) => u.username === req.body.username);
+  const users = db.data.admin;
+  const user = users.find((u) => u.email === req.body.email);
   if (user == null) {
-    return res.status(400).send(`Cannot find user: ${req.body.username}`);
+    return res.status(400).send(`Cannot find email: ${req.body.email}`);
   }
 
   if (bcrypt.compareSync(req.body.password, user.password)) {
@@ -163,7 +163,7 @@ server.post("/admin/login", (req, res) => {
     const accessToken = generateAccessToken(user);
     return res.send({
       accessToken: accessToken,
-      user: user
+      email: email
     });
   } else {
     res.send("Not allowed, name/password mismatch.");
