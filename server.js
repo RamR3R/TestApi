@@ -145,7 +145,7 @@ server.post("/register", (req, res) => {
 
 // login/sign in logic
 server.post("/admin/login", (req, res) => {
-  if (!req.body || !req.body.username || !req.body.password) {
+  if (!req.body || !req.body.email || !req.body.password) {
     return res
       .status(400)
       .send("Bad request, requires username & password both.");
